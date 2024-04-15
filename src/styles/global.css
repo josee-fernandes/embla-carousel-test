@@ -19,13 +19,24 @@ body {
   width: 100%;
   max-width: 1280px;
   height: 100vh;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   margin: 0 auto;
   display: flex;
   gap: 4rem;
   justify-content: space-evenly;
+  padding-block: 2rem;
 
   & .examples {
     flex: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+
+    & .examples {
+      flex: initial;
+    }
   }
 }

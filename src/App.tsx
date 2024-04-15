@@ -29,11 +29,15 @@ export const App: React.FC = () => {
       </div>
       <div className="examples">
         <div>
-          <p>Navigators ON</p>
+          <p>
+            Navigators <span className="on">ON</span>
+          </p>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </div>
         <div>
-          <p>Navigators OFF</p>
+          <p>
+            Navigators <span className="off">OFF</span>
+          </p>
           <EmblaCarousel
             slides={SLIDES}
             options={OPTIONS}
