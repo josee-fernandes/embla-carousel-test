@@ -15,9 +15,13 @@ import {
 type PropType = {
   slides: number[]
   options?: EmblaOptionsType
+  withNavigators?: boolean
 }
 
-const EmblaCarousel: React.FC<PropType> = (props) => {
+const EmblaCarousel: React.FC<PropType> = ({
+  withNavigators = true,
+  ...props
+}) => {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
@@ -31,7 +35,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi)
 
   return (
-    <section className="embla">
+    <section className="embla custom-embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((index) => (
@@ -42,17 +46,25 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
+      {withNavigators && (
+        <div className="embla__controls">
+          <div className="embla__buttons">
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
+            />
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
+          </div>
 
-        <SelectedSnapDisplay
-          selectedSnap={selectedSnap}
-          snapCount={snapCount}
-        />
-      </div>
+          <SelectedSnapDisplay
+            selectedSnap={selectedSnap}
+            snapCount={snapCount}
+          />
+        </div>
+      )}
     </section>
   )
 }

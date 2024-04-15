@@ -1,0 +1,20 @@
+.custom-embla {
+  background: red;
+
+  & .embla__viewport {
+    background: green;
+
+    & .embla__container {
+      background: purple;
+      padding-block: 1rem;
+
+      & .embla__slide {
+        background: pink;
+      }
+    }
+  }
+
+  & .embla__controls {
+    background: gray;
+  }
+}
