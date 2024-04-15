@@ -2,19 +2,27 @@
   background: red;
 
   & .embla__viewport {
-    background: green;
+    background: lime;
 
     & .embla__container {
-      background: purple;
+      background: darkviolet;
       padding-block: 1rem;
 
       & .embla__slide {
-        background: pink;
+        background: royalblue;
       }
     }
   }
 
   & .embla__controls {
     background: gray;
+
+    & .embla__buttons {
+      background: cyan;
+    }
+
+    & .embla__selected-snap-display {
+      background: fuchsia;
+    }
   }
 }

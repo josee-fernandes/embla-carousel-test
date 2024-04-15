@@ -18,10 +18,13 @@ export const App: React.FC = () => {
       <div className="labels">
         <p>Labels</p>
         <ul>
-          <Label color="red">Red</Label>
-          <Label color="green">Green</Label>
-          <Label color="purple">Purple</Label>
-          <Label color="pink">Pink</Label>
+          <Label color="red">Embla</Label>
+          <Label color="lime">Viewport</Label>
+          <Label color="darkviolet">Container</Label>
+          <Label color="royalblue">Slide</Label>
+          <Label color="gray">Controls</Label>
+          <Label color="cyan">Buttons</Label>
+          <Label color="fuchsia">Selected snap display</Label>
         </ul>
       </div>
       <div className="examples">
