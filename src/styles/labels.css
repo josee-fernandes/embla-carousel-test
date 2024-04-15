@@ -1,0 +1,31 @@
+.labels {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & > p {
+    font-weight: 700;
+  }
+
+  & > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & > li {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      & > div {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 6px;
+      }
+
+      & > p {
+        font-size: 1rem; 
+      }
+  }
+}

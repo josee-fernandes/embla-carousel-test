@@ -6,6 +6,7 @@ import './styles/labels.css'
 import { EmblaOptionsType } from 'embla-carousel'
 
 import EmblaCarousel from './components/embla-carousel'
+import { Label } from './components/label'
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, duration: 60, loop: true }
 const SLIDE_COUNT = 4
@@ -17,10 +18,10 @@ export const App: React.FC = () => {
       <div className="labels">
         <p>Labels</p>
         <ul>
-          <li>
-            <div />
-            <p>Something</p>
-          </li>
+          <Label color="red">Red</Label>
+          <Label color="green">Green</Label>
+          <Label color="purple">Purple</Label>
+          <Label color="pink">Pink</Label>
         </ul>
       </div>
       <div className="examples">
