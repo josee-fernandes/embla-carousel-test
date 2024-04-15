@@ -36,11 +36,5 @@
     & > p {
       text-align: center;
     }
-
-    & > ul {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
   }
 }

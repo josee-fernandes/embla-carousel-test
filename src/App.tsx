@@ -19,12 +19,24 @@ export const App: React.FC = () => {
         <p>Labels</p>
         <ul>
           <Label color="red">Embla</Label>
-          <Label color="lime">Viewport</Label>
-          <Label color="darkviolet">Container</Label>
-          <Label color="royalblue">Slide</Label>
-          <Label color="gray">Controls</Label>
-          <Label color="cyan">Buttons</Label>
-          <Label color="fuchsia">Selected snap display</Label>
+          <Label color="lime" left={2}>
+            Viewport
+          </Label>
+          <Label color="darkviolet" left={4}>
+            Container
+          </Label>
+          <Label color="royalblue" left={6}>
+            Slide
+          </Label>
+          <Label color="gray" left={2}>
+            Controls
+          </Label>
+          <Label color="cyan" left={4}>
+            Buttons
+          </Label>
+          <Label color="fuchsia" left={6}>
+            Selected snap display
+          </Label>
         </ul>
       </div>
       <div className="examples">
